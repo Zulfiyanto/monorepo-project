@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:turborepo.com)",
+      "Bash(npx create-next-app:*)",
+      "Bash(pnpm:*)",
+      "Bash(pnpm --filter=@repo/utils build)",
+      "Bash(pnpm --filter=@repo/auth build)",
+      "Bash(ls:*)",
+      "Bash(node -e \"console.log(require(''crypto'').randomBytes(32).toString(''base64''))\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
