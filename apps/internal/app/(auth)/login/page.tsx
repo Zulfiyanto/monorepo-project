@@ -138,7 +138,7 @@ export default function LoginPage() {
           </form>
 
           <div className="mt-4 text-center text-sm text-muted-foreground">
-            <p>Demo: gunakan email yang mengandung "admin" untuk login sebagai admin</p>
+            <p>Demo: gunakan email yang mengandung &quot;admin&quot; untuk login sebagai admin</p>
           </div>
         </CardContent>
       </Card>

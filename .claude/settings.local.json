@@ -7,7 +7,8 @@
       "Bash(pnpm --filter=@repo/utils build)",
       "Bash(pnpm --filter=@repo/auth build)",
       "Bash(ls:*)",
-      "Bash(node -e \"console.log(require(''crypto'').randomBytes(32).toString(''base64''))\")"
+      "Bash(node -e \"console.log(require(''crypto'').randomBytes(32).toString(''base64''))\")",
+      "Bash(git add:*)"
     ],
     "deny": [],
     "ask": []

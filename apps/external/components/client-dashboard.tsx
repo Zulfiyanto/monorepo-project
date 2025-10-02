@@ -104,7 +104,8 @@ export function ClientDashboard({ user }: ClientDashboardProps) {
                 <DropdownMenuSeparator />
                 <DropdownMenuItem
                   onClick={() => {
-                    const internalUrl = process.env.NEXT_PUBLIC_INTERNAL_URL || "http://localhost:3001";
+                    const internalUrl =
+                      process.env.NEXT_PUBLIC_INTERNAL_URL || "http://localhost:3001";
                     signOut({ callbackUrl: `${internalUrl}/login` });
                   }}
                 >
@@ -125,7 +126,7 @@ export function ClientDashboard({ user }: ClientDashboardProps) {
             <div>
               <h2 className="mb-2 text-3xl font-bold">Welcome back, {user.name}! 👋</h2>
               <p className="text-violet-100">
-                Great to see you again. Here's what's happening with your account today.
+                Great to see you again. Here&apos;s what&apos;s happening with your account today.
               </p>
             </div>
             <div className="hidden rounded-full bg-white/20 p-6 backdrop-blur-sm md:block">

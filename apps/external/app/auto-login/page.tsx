@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useSearchParams, useRouter } from "next/navigation";
 
-export default function AutoLoginPage() {
+function AutoLoginContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [error, setError] = useState<string | null>(null);
@@ -103,5 +103,28 @@ export default function AutoLoginPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function AutoLoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-violet-50 via-purple-50 to-fuchsia-50">
+          <div className="text-center space-y-4">
+            <div className="flex justify-center">
+              <div className="h-12 w-12 animate-spin rounded-full border-4 border-violet-500 border-t-transparent"></div>
+            </div>
+            <div>
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-violet-600 to-fuchsia-600 bg-clip-text text-transparent">
+                Loading...
+              </h2>
+            </div>
+          </div>
+        </div>
+      }
+    >
+      <AutoLoginContent />
+    </Suspense>
   );
 }
