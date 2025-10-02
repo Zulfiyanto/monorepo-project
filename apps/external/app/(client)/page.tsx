@@ -11,5 +11,5 @@ export default async function ClientHomePage() {
     redirect("http://localhost:3001/login");
   }
 
-  return <ClientDashboard us er={session.user!} />;
+  return <ClientDashboard user={session.user!} />;
 }
